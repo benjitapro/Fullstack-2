@@ -1,6 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,9 +20,9 @@ function Footer() {
           {/* links*/}
           <Col md={4} className="mb-3 mb-md-0">
             <Nav className="justify-content-center">
-              <Nav.Link href="/" className="text-white" data-testid="footer-link-inicio">Inicio</Nav.Link>
-              <Nav.Link href="/about" className="text-white" data-testid="footer-link-nosotros">Nosotros</Nav.Link>
-              <Nav.Link href="/Contact.jsx" className="text-white" data-testid="footer-link-contacto">Contacto</Nav.Link>
+              <Nav.Link as={Link} to="/" className="text-white" data-testid="footer-link-inicio">Inicio</Nav.Link>
+              <Nav.Link as={Link} to="/about" className="text-white" data-testid="footer-link-nosotros">Nosotros</Nav.Link>
+              <Nav.Link as={Link} to="/contact" className="text-white" data-testid="footer-link-contacto">Contacto</Nav.Link>
             </Nav>
           </Col>
 
