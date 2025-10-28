@@ -1,30 +1,33 @@
-
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import Footer from './Footer.jsx';
 
 describe('Componente: Footer', () => {
-// verifica que el copyright se muestre con el año correcto
+  const renderFooter = () => {
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>
+    );
+  };
+
   it('debe renderizar el copyright con el año actual', () => {
-    render(<Footer />);
-    const copyrightText = screen.getByTestId('footer-copyright');
-    // verifica que contenga el año 
+    renderFooter();
+    const node = screen.getByTestId('footer-copyright');
     const currentYear = new Date().getFullYear();
-    expect(copyrightText.textContent).toContain(String(currentYear));
+    expect(node.textContent).toContain(String(currentYear));
   });
 
-// verifica que contacto existe por data-testid
   it('debe renderizar el enlace de Contacto', () => {
-    render(<Footer />);
+    renderFooter();
     const contactLink = screen.getByTestId('footer-link-contacto');
     expect(contactLink.textContent).toBe('Contacto');
   });
 
-  //verifica el icono de face
   it('debe renderizar el ícono de Facebook', () => {
-    render(<Footer />);
-    // Verificamos que el ícono (identificado por 'social-fb') exista
+    renderFooter();
     expect(screen.getByTestId('social-fb')).toBeTruthy();
   });
-
 });
+
