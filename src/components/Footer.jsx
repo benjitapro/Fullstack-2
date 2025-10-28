@@ -21,7 +21,7 @@ function Footer() {
             <Nav className="justify-content-center">
               <Nav.Link href="/" className="text-white" data-testid="footer-link-inicio">Inicio</Nav.Link>
               <Nav.Link href="/about" className="text-white" data-testid="footer-link-nosotros">Nosotros</Nav.Link>
-              <Nav.Link href="/contact" className="text-white" data-testid="footer-link-contacto">Contacto</Nav.Link>
+              <Nav.Link href="/Contact.jsx" className="text-white" data-testid="footer-link-contacto">Contacto</Nav.Link>
             </Nav>
           </Col>
 

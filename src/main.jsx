@@ -16,6 +16,7 @@ import { CarritoProvider } from './components/CarritoContext.jsx';
 import Home from './components/Home.jsx';
 import Login from './components/Login.jsx';
 import Catalog from './components/Catalog.jsx';
+import Contact from './components/Contact.jsx';
 
 // mapa del sitio
 const router = createBrowserRouter([
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "login", element: <Login /> },
       { path: "catalog", element: <Catalog /> },
+      { path: "contact", element: <Contact /> },
     ],
   },
 ]);

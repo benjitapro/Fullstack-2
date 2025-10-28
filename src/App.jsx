@@ -10,13 +10,14 @@ function App() {
     <div>
       <Header />
       <main>
-        <Outlet /> {/* pagina actual*/}
+        <Outlet />
       </main>
       <Footer />
-      {/* oculto hasta que header lo llama */}
+      {/* Modal del carrito (controlado desde Header) */}
       <CarritoModal />
     </div>
   );
 }
 
 export default App;
+
